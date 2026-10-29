@@ -65,7 +65,7 @@ Future<void> main() async {
   final manager = TaskManager();
 
   // ========== ЦИКЛ (for) ==========
-  final titles = ['Купить хлеб', 'Сделать лабу', 'Позвонить маме'];
+  final titles = ['Купить хлеб', 'Сделать лабу', 'Позвонить провайдеру'];
   final priorities = [TaskPriority.low, TaskPriority.high, TaskPriority.medium];
 
   for (var i = 0; i < titles.length; i++) {
@@ -76,7 +76,7 @@ Future<void> main() async {
   manager.printAll();
 
   // Запуск Future и ожидание
-  await manager.processTasksAsync();
+   manager.processTasksAsync();
 
   print('--- После обработки ---');
   manager.printAll();
